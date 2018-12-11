@@ -1,0 +1,31 @@
+
+
+
+<ion-content padding>
+    
+  <ion-row center style="margin-top: 22px;">  
+        <ion-col text-center>   
+          <button ion-button>...Reset Password...</button> 
+        </ion-col> 
+       </ion-row> 
+
+   
+  
+
+       <form [formGroup]="ResetPassForm" style="margin-top: 34px;" (ngSubmit)="ResetPassword(!this.ResetPassForm.value)">
+    <ion-item>     
+      <ion-input type="email" placeholder="e-mail" formControlName="mail"></ion-input>
+    </ion-item>
+        
+ 
+    <ion-row center style="margin-top: 22px;">  
+        <ion-col>
+            <button ion-button type="submit" style="width:60%;">Reset</button>
+        </ion-col>       
+     </ion-row> 
+      </form>
+
+      <ion-col style="text-align:center">   
+        <button ion-button (click)="backtologin()" style="width:60%;">Sign In</button> 
+      </ion-col>
+</ion-content>

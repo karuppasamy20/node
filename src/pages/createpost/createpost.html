@@ -1,0 +1,47 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>createpost</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="createForm" (submit)="createSong()" novalidate>
+    <ion-item>
+      <ion-label stacked>text1</ion-label>
+      <ion-input formControlName="songName" type="text" 
+        placeholder="What's this song called?">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked> Name</ion-label>
+      <ion-input formControlName="artistName" type="text" 
+        placeholder="Who sings this song?">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>text2</ion-label>
+      <ion-input formControlName="albumName" type="text" 
+        placeholder="What's the album's name?">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>text</ion-label>
+      <ion-textarea formControlName="songDescription" type="text" 
+        placeholder="What's this song about?">
+      </ion-textarea>
+    </ion-item>
+
+    <button ion-button block type="submit" [disabled]="!createForm.valid">
+     Post
+    </button>
+  </form>
+  
+
+
+</ion-content>

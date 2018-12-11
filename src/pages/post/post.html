@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+          home page
+        </ion-title>
+        <ion-buttons end>
+          <button ion-button icon-only (click)="goToCreatePage()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button ion-button (click)="getPicture(0)">Show Album</button>
+        </ion-buttons>
+      </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let dataitem of data | async"
+  >
+  <ion-card-header>
+    {{ dataitem.photo }}
+    <img  [src]="dataitem.photo" />
+  </ion-card-header>
+</ion-card>
+    <ion-card>
+        <img [src]="captureDataUrl" *ngIf="captureDataUrl"/>
+        <h2>{{captureDataUrl}}</h2>
+        <button ion-button (click)="upload()" *ngIf="captureDataUrl">Upload to Firebase!</button>
+      </ion-card>
+
+  <ion-card *ngFor="let song of songList | async"
+  (click)="goToDetailPage(song)">
+  <ion-card-header>
+    {{ song.songName }}
+  </ion-card-header>
+  <ion-card-content>
+    <img [src]="Downloadimage">
+   Name : {{ song.artistName }}
+  </ion-card-content>
+</ion-card>
+
+
+
+
+</ion-content>
+
+
+<ion-footer>
+
+  <ion-toolbar>
+    <p>{{usermail}}</p>
+    <button ion-button (click)="logout()">Logout</button>
+  </ion-toolbar>
+</ion-footer>

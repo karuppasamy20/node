@@ -1,0 +1,23 @@
+ 
+<ion-content padding>
+    <ion-row center style="margin-top: 22px;">  
+        <ion-col text-center>   
+          <button ion-button>...Sign Up...</button> 
+        </ion-col> 
+       </ion-row> 
+
+  <form [formGroup]="SignupForm" (ngSubmit)="signup()">
+    <ion-item>
+     
+      <ion-input type="email" placeholder="Email"  formControlName="mail"></ion-input>
+    </ion-item>
+    <ion-item>
+     
+      <ion-input type="password" placeholder="Password"  formControlName="password"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" style="margin-top: 22px;" [disabled]="!SignupForm.valid">Create a Account</button>
+  </form>
+
+  <button ion-button (click)="backtologin()" style="width:60%;">Sign In</button> 
+
+</ion-content>

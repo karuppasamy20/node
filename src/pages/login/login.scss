@@ -1,0 +1,76 @@
+
+page-login {
+    .row1{
+       
+        height: 42%;
+        -webkit-transition: -webkit-box-shadow .25s;
+        transition: -webkit-box-shadow .25s;
+        transition: box-shadow .25s;
+        transition: box-shadow .25s, -webkit-box-shadow .25s;
+        border-radius: 2px;
+        
+    }
+    ion-content{
+        background: #e43a15;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #f94432 0%, #f52376 100%);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #f94432 0%, #f52376 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .row2{
+        
+        height: 58%;
+    }
+     .LoginForm{
+        position: absolute;
+        top: 32%;
+        width: 90%;
+       
+        left: 5%;
+        border-radius: 2px;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        
+     }
+    .LoginForm form{
+        width: 100%;
+        z-index: 2000;
+    }
+    .scroll-content{
+        padding-bottom: 0px !important;
+    } 
+    .item-md{
+        padding-left: 0px !important;
+    }
+    .button-md{
+        
+       
+        text-transform: capitalize;
+    }
+    .text-input{
+        color: #488aff !important;
+    }
+    .bottomBtn{
+        padding-top: 87%;
+        text-transform: capitalize;
+    }
+    .button-inner{
+        font-size: 15px !important;
+        font-weight: 400;
+    }
+    .text-input::-moz-placeholder {
+        color: #488aff !important;
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color: #488aff !important;
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        text-indent: 0;
+        color: #488aff !important;
+      }
+      
+     
+}
+
+
+
